@@ -20,8 +20,8 @@ print(bal)
 ############   Init Variables ##############
 
 
-$PythonScriptPath = ""
-$CSVname = "Results_LickHunter"
+$PythonScriptPath = "C:\users\jduval\OneDrive - Capgemini\Bureau\"
+$CSVname = "Resultats_LickHunter"
 $Scriptname = "output1"
 $csvpath = "$pyscriptspath\$csvname.csv"
 
@@ -48,9 +48,9 @@ $lastcsvvalue = $csv[$csv.name.count]
 
 $date = get-date -Format "dd/MM/yyy HH:mm"
 $wallet = [math]::Round($value1[0].balance,2)
-$Usdtprofit = [math]::Round($($value1[0].balance - $csv[$count -1].'wallet$'),2)
-$Percprofit =[math]::Round($($Usdtprofit / $csv[$count -1].'wallet$')*100,2)
-$Percprofit1stday = [math]::Round($($Usdtprofit / $csv[$count -1].'wallet$')*100,2)
+$Dolprofit = [math]::Round($($value1[0].balance - $csv[$count -1].'wallet$'),2)
+$Percprofit =[math]::Round($($Dolprofit / $csv[$count -1].'wallet$')*100,2)
+$Percprofit1stday = [math]::Round($($Dolprofit / $firstscvvalue.'wallet$')*100,2)
 
 $newvaleur = "$date;$wallet;$Dolprofit;$Percprofit;$Percprofit1stday"
 
