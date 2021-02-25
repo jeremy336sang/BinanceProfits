@@ -1,4 +1,7 @@
-## Install Python 3.7 & run on Powershell python -m pip install python-binance #Windows
+## Install Python 3.7 & run on Powershell ISE to change variables 
+#Install twisted file.wh : https://www.lfd.uci.edu/~gohlke/pythonlibs/#twisted
+#python -m pip install twistedfile.wh
+#python -m pip install python-binance 
 
 #Paste Script without '<#' on a file with name output1.py
 <#
@@ -17,8 +20,8 @@ print(bal)
 
 
 
-# change variables PythonScriptPath, CSVname , Scriptname :
- $PythonScriptPath = ""
+# change variables PythonScriptPath, CSVname , Scriptname as you want :
+ $PythonScriptPath = "C:\temp"
  $scriptname = "output1.py"
  $CsvName = "results.csv"
  $csvpath = "$pythonscriptpath\$csvname"
