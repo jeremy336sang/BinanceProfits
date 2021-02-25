@@ -18,10 +18,10 @@ print(bal)
 
 
 # change variables PythonScriptPath, CSVname , Scriptname :
- $PythonScriptPath = "C:\temp"
+ $PythonScriptPath = ""
  $scriptname = "output1.py"
  $CsvName = "results.csv"
- $csvpath = "$pyscriptspath\$csvname"
+ $csvpath = "$pythonscriptspath\$csvname"
 
 ############################################
 
