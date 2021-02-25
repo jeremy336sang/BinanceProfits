@@ -21,7 +21,7 @@ print(bal)
  $PythonScriptPath = ""
  $scriptname = "output1.py"
  $CsvName = "results.csv"
- $csvpath = "$pythonscriptspath\$csvname"
+ $csvpath = "$pythonscriptpath\$csvname"
 
 ############################################
 
