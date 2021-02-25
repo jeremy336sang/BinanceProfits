@@ -18,7 +18,7 @@ print(bal)
 
 
 # change variables PythonScriptPath, CSVname , Scriptname :
- $PythonScriptPath = "C:\temp\"
+ $PythonScriptPath = "C:\temp"
  $scriptname = "output1.py"
  $CsvName = "results.csv"
  $csvpath = "$pyscriptspath\$csvname"
@@ -31,7 +31,6 @@ $Dolprofit = $null
 $Percprofit = $null
 $Percprofit1stday = $null
 $newvaleur = $null 
-$csvpath = "$pyscriptspath$csvname.csv"
 
 Set-Location -Path $pyscriptspath
 $value1 = py ./$Scriptname | ConvertFrom-Json 
@@ -43,7 +42,7 @@ $count = $csv.date.count
 $firstcsvvalue = $csv[0]
 $lastcsvvalue = $csv[$csv.name.count]
 
-$date = get-date -Format "dd/MM/yyy HH:mm"
+$date = get-date -Format "dd/MM/yyy HH:mm:ss"
 $wallet = [math]::Round($value1[0].balance,2)
 $Dolprofit = [math]::Round($($value1[0].balance - $csv[$count -1].'wallet$'),2)
 $Percprofit =[math]::Round($($Dolprofit / $csv[$count -1].'wallet$')*100,2)
@@ -51,7 +50,7 @@ $Percprofit1stday = [math]::Round($($Dolprofit / $firstcsvvalue.'wallet$')*100,2
 
 $newvaleur = "$date;$wallet;$Dolprofit;$Percprofit;$Percprofit1stday"
 
-if (!$(Test-Path "$PythonScriptPath\$csvname.csv")){
+if (!$(Test-Path "$PythonScriptPath\$csvname")){
 $initvaleur = "$date;$wallet;N/A;N/A;N/A"
 $initvaleur | Add-Content -Path $csvpath
 
