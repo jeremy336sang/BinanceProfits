@@ -1,12 +1,6 @@
 ## Install Python 3.7 & run on Powershell python -m pip install python-binance #Windows
 
 #Paste Script without '<#' on a file with name output1.py
-# change variable PythonScriptPath, CSVname , Scriptname :
- $PythonScriptPath = "C:\temp\"
- $scriptname = "output1.py"
- $CsvName = "results.csv"
- $csvpath = "$pyscriptspath\$csvname"
-
 <#
 import binance
 from binance.client import Client
@@ -23,10 +17,11 @@ print(bal)
 
 
 
-
-
-
-
+# change variables PythonScriptPath, CSVname , Scriptname :
+ $PythonScriptPath = "C:\temp\"
+ $scriptname = "output1.py"
+ $CsvName = "results.csv"
+ $csvpath = "$pyscriptspath\$csvname"
 
 ############################################
 
