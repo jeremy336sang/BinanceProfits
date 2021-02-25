@@ -32,8 +32,8 @@ $Percprofit = $null
 $Percprofit1stday = $null
 $newvaleur = $null 
 
-Set-Location -Path $pyscriptspath
-$value1 = py ./$Scriptname | ConvertFrom-Json 
+Set-Location -Path $pythonscriptpath
+$value1 = py "./$Scriptname" | ConvertFrom-Json 
 $value1 = $value1  | Select-Object balance,withdrawAvailable
 
 
